@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frontend Mentor | E-commerce product page</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href=".\style.css">
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <!-- light box for important contents -->
+        <div class="shadowContainer"></div>
+
+        <!-- header and nav for desktop -->
+
+        <header class="desktop">
+            <img src=".\images\logo.svg" alt="site logo" class="logo">
+            <ul class="nav">
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li class="navActive"><a href="#" id="navActive">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="cartAndProfile">
+                <img src=".\images\icon-cart.svg" alt="shopping cart" id="shoppingCart"  class="shoppingCart">
+                <button class="shoppingCartItemNumbers">0</button>
+                <img src=".\images\image-avatar.png" alt="user-profile">
+            </div>
+        </header>
+
+        <!-- header and nav for mobile -->
+        <!-- nav -->
+
+        <ul class="mobileNav">
+            <li class="closeBtn">
+                <a href= "javascript:void(0)" id="closeBtn"> <img src=".\images\icon-close.svg" alt="close menu"></a>
+            </li>
+            <li>
+                <a href="#">Collections</a>
+            </li>
+            <li>
+                <a href="#">Men</a>
+            </li>
+            <li>
+                <a href="#" class="navActive">Women</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+        <header class="mobile"> 
+            <img src=".\images\icon-menu.svg" alt="open-menu" id="openMenuBtn">
+            <img src=".\images\logo.svg" alt="site logo" class="logoMobile">
+            <div class="cartAndProfileMobile">
+                <img src=".\images\icon-cart.svg" alt="shopping cart" id="shoppingCart" class="shoppingCartMobile">
+                <button class="shoppingCartItemNumbers shoppingCartItemNumbers2">0</button>
+                <img src=".\images\image-avatar.png" alt="user-profile-mobile">
+            </div>
+        </header>
+
+        <!-- cart items divs. hidden by default -->
+        <!-- empty cart -->
+
+        <div class="cartItems">
+            <div class="carth4">
+                <h4> Cart </h4>
+            </div>
+            <div class="carth5">
+                <h5> Your cart is empty. </h5>
+            </div>
+        </div>
+
+        <!-- full cart -->
+
+        <div class="cartItemsFull">
+            <div class="carth4Full">
+                <h4> Cart </h4>
+            </div>
+            <div class="cartItemsFullSect">
+                <img src=".\images\image-product-1-thumbnail.jpg" alt="an item" class="imgThumbnailcart" id="imgThumbnailcart">
+                <div class="cartItemsDivSect">
+                    <h5 class="cartitemsh5">
+                        Fall Limited Edition Sneakers
+                    </h5>
+                    <span>
+                    <span id="cartItemsCounter"> $125 * 3 </span> <span id="cartItemsTotal"> <b> $375 </b> </span>
+                    </span>
+                </div>
+                <!-- delete icon -->
+                <img src=".\images\icon-delete.svg" alt="delete button" id="deleteBtn">
+            </div>
+            <button class="addToCartBtn cartItemsbtn"> Checkout </button>
+        </div>
+
+        <!-- main content/body -->
+
+        <div class="mainContent">
+
+            <!-- images -->
+
+            <div class="imgSection">
+                <span class="nextBtnLeft"> <img src=".\images\icon-previous.svg" alt="next button"> </span>
+                <img src=".\images\image-product-1.jpg" alt="a product" class="productImg">
+                <span class="nextBtnRight"> <img src=".\images\icon-next.svg" alt="previous button"> </span>
+                <div class="thumbnailsection">
+                    <img src=".\images\image-product-1-thumbnail.jpg" alt="thumbnail" class="imgThumbnail active" id="imgThumbnail1" title="view images">
+                    <img src=".\images\image-product-2-thumbnail.jpg" alt="thumbnail" class="imgThumbnail" id="imgThumbnail2">
+                    <img src=".\images\image-product-3-thumbnail.jpg" alt="thumbnail" class="imgThumbnail" id="imgThumbnail3">
+                    <img src=".\images\image-product-4-thumbnail.jpg" alt="thumbnail" class="imgThumbnail" id="imgThumbnail4">
+                </div>
+            </div>
+
+            <!-- light box section -->
+
+            <div class="lightBox">
+                <img src=".\images\icon-close.svg" alt="close lightbox"  id="closeLightBox" title="close box">
+                <span class="nextBtnLeft nextBtnLeft2"> <img src=".\images\icon-previous.svg" alt="next button"> </span>
+                <img src=".\images\image-product-1.jpg" alt="a product" class="productImg" id="productLightBox">
+                <span class="nextBtnRight nextBtnRight2"> <img src=".\images\icon-next.svg" alt="previous button"> </span>
+                <div class="thumbnailsection thumbnailsection2">
+                    <img src=".\images\image-product-1-thumbnail.jpg" alt="thumbnail" class="imgThumbnail active" id="imgThumbnail1" title="view images">
+                    <img src=".\images\image-product-2-thumbnail.jpg" alt="thumbnail" class="imgThumbnail" id="imgThumbnail2">
+                    <img src=".\images\image-product-3-thumbnail.jpg" alt="thumbnail" class="imgThumbnail" id="imgThumbnail3">
+                    <img src=".\images\image-product-4-thumbnail.jpg" alt="thumbnail" class="imgThumbnail" id="imgThumbnail4">
+                </div>
+            </div>
+            
+            <!-- about the product/images -->
+
+            <div class="imgContentSection">
+                <h5 class="imgContentSectionh5"> Sneaker Company </h5>
+                <h2 class="imgContentSectionh2"> Fall Limited Edition Sneakers </h2>
+                <h5 class="imgContentSectionh5 normal"> 
+                    These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                    durable rubber outer sole, they'll withstand everything the weather can offer.
+                </h5>
+                <span id="spanPrice"> $125.00 </span>
+                <span id="spanDiscount"> 50% </span>
+                <span id="spaceToggle"></span>
+                <span id="spanDiscountAmount"> $250.00 </span>
+                <div class="functionalities">
+                    <div class="spanWrap">
+                        <button class="btn" id="minusBtn">-</button>
+                        <span class="cartItemsCounter">0</span>
+                        <button class="btn" id="plusBtn">+</button>                    
+                    </div>
+                    <button class="addToCartBtn" id="addToCartBtn">
+                        <img src=".\images\icon-cart.svg" alt="cart btton">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Osazuwa Irimoren</a>.
+        </div>
+        <script>
+
+        </script>
+    </body>
+</html>
